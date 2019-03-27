@@ -1,0 +1,142 @@
+/*Simple body stuff*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.color {
+  background: linear-gradient(-45deg, #48dfda, #20a0a4); /*Blue background*/
+}
+
+/*File button*/
+.wrapper .file {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  letter-spacing: 0.01em;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity .4s;
+  z-index: 2;
+}
+
+.wrapper .file:hover {
+  opacity: .8;
+}
+.wrapper .file input {
+  display: none;
+}
+.wrapper canvas {
+  vertical-align: bottom;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*Checkbox Switches*/
+
+section {
+  width: 160px;
+  display: inline-block;
+ 
+  position: absolute;
+  
+  padding: 10px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity .4s;
+  z-index: 2;
+}
+
+.options1{
+top: 70px !important;
+  left: 20px !important;
+}
+
+.options2{
+  top: 140px !important;
+  left: 20px !important;
+}
+
+.checkboxClass {
+  display: block;
+  opacity: 0;
+}
+.labelClass {
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  background: rgb(189, 189, 189);
+  border-radius: 30px;
+  
+  transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -webkit-transition: background-color 0.4s;
+}
+.labelClass:after {
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  content: '';
+  position: absolute;
+  background: #FFF;
+  border-radius: 10px;
+}
+.checkboxClass:checked + .labelClass {
+  background: rgb(255, 245, 0);
+}
+.checkboxClass:checked + .labelClass:after {
+  left: auto;
+  right: 0;
+}
+
+.checkboxLabel {
+  font: normal 8px/40px Arial;
+  color: rgb(255, 255, 255);
+  display: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.checkboxClass:checked ~ .checkboxLabel:nth-of-type(1) {
+  color: rgb(255, 245, 0);
+  display: block;
+}
+.checkboxClass:not(:checked) ~ .checkboxLabel:nth-of-type(2) {
+  display: block;
+}
+
+/*Debug Menu*/
+#debugMenu {
+  /*width: 245px; 
+  height: 300px; */
+  margin-left: 20px; 
+  background-color: rgb(61,120,164);
+  position:absolute;
+  top: 400px;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: opacity .4s;
+  z-index: 2;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}

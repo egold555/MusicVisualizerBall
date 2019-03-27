@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Eric's Audio Visualizer</title>
+  <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+<body>
+    
+    <video preload="auto" autoplay muted loop id="myVideo">
+  <source src="vid/720p.mp4" type="video/mp4">
+</video>
+    
+  <center><h1 style="color:white;">Eric's Music Visualizer</h1></center>
+  <div class="wrapper" id="wrapper">
+    <label class="file" for="file">
+      choose a mp3 file
+    <input id="file" type="file">
+    </label>
+
+  </div>
+
+  <section class = "options1">
+    <input type="checkbox" id="loopaudio" class="checkboxClass" checked/>
+    <label class="labelClass" for="loopaudio"></label>
+  
+    <p class="checkboxLabel">Loop audio: true</p>
+    <p class="checkboxLabel">Loop audio: false</p>
+  </section>
+
+  <section class = "options2">
+    <input type="checkbox" id="debugSwitch" class="checkboxClass"/>
+    <label class="labelClass" for="debugSwitch"></label>
+  
+    <p class="checkboxLabel">Debug: true</p>
+    <p class="checkboxLabel">Debug: false</p>
+  </section>
+
+
+  <canvas id = "debugMenu" width="245" height="300"></canvas>
+  
+  <script src='js/three.js'></script>
+  <script src='js/OrbitControls.js'></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/fpsmeter.min.js"></script>
+
+</body>
+</html>
